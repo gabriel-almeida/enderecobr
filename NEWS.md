@@ -1,4 +1,4 @@
-# enderecobr (versão em desenvolvimento)
+# enderecobr 0.5.0
 
 ## Novas funcionalidades
 
