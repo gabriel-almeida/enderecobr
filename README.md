@@ -4,11 +4,11 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/enderecobr)](https://CRAN.R-project.org/package=enderecobr)
 [![B
-status](https://github.com/ipeaGIT/enderecobr/workflows/check/badge.svg)](https://github.com/ipeaGIT/enderecobr/actions?query=workflow%3Acheck)
+status](https://github.com/ipea/enderecobr/workflows/check/badge.svg)](https://github.com/ipea/enderecobr/actions?query=workflow%3Acheck)
 [![CRAN/METACRAN Total
 downloads](https://cranlogs.r-pkg.org/badges/grand-total/enderecobr?color=blue)](https://CRAN.R-project.org/package=enderecobr)
 [![Codecov test
-coverage](https://codecov.io/gh/ipeaGIT/enderecobr/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ipeaGIT/enderecobr?branch=main)
+coverage](https://codecov.io/gh/ipea/enderecobr/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ipea/enderecobr?branch=main)
 [![Lifecycle:
 stable](https://lifecycle.r-lib.org/articles/figures/lifecycle-stable.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 
@@ -30,7 +30,7 @@ isso, use o seguinte comando:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("ipeaGIT/enderecobr")
+remotes::install_github("ipea/enderecobr")
 ```
 
 ## Utilização
@@ -39,7 +39,7 @@ Esta seção visa oferecer apenas uma visão geral das funcionalidades do
 pacote. Para mais detalhes, leia a vignette introdutória:
 
 - [**enderecobr**: padronizador de endereços
-  brasileiros](https://ipeagit.github.io/enderecobr/articles/enderecobr.html)
+  brasileiros](https://ipea.github.io/enderecobr/articles/enderecobr.html)
 
 O **enderecobr** disponibiliza funções para padronizar diferentes campos
 de um endereço. A `padronizar_enderecos()`, carro-chefe do pacote, atua
