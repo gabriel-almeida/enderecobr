@@ -20,7 +20,7 @@ Description: Padroniza endereços brasileiros a partir de diferentes
     manipulation, not supporting probabilistic matches between strings.)
 License: MIT + file LICENSE
 URL: https://github.com/ipea/enderecobr,
-    https://ipeagit.github.io/enderecobr/
+    https://ipea.github.io/enderecobr/
 BugReports: https://github.com/ipea/enderecobr/issues
 Depends: 
     R (>= 4.2)
