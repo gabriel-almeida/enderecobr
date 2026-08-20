@@ -22,3 +22,6 @@ pkgdown/
 ^src/Makevars\.win$
 ^\.claude$
 ^quality_reports
+CLAUDE.md
+MEMORY.md
+AGENTS.md
