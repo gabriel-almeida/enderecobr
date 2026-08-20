@@ -1,13 +1,45 @@
 # enderecobr 0.5.0.9000 (versão em desenvolvimento)
 
-
-## Alterações e Correções upstream no enderecobr_rs
-
-## Correção de bugs
-
-## Novas funcionalidades
-
 ## Notas
+
+- Repositório migrado de `ipeaGIT/enderecobr` para `ipea/enderecobr` ([issue
+  #67](https://github.com/ipea/enderecobr/issues/67)).
+- Atualização do pacote para utilizar a nova crate v0.2.0 do 
+[enderecobr_rs](https://github.com/ipea/enderecobr_rs).
+
+## Adições e mudanças de padronização
+
+- Novos casos de NA e de "S/N" passaram a ser reconhecidos na padronização de
+  números ([issue #68](https://github.com/ipea/enderecobr/issues/68)).
+- A `padronizar_numeros()` agora trata números negativos ([issue
+  #55](https://github.com/ipea/enderecobr/issues/55)).
+- A `padronizar_numeros()` agora reconhece "S/NR" como "S/N" ([issue
+  #45](https://github.com/ipea/enderecobr/issues/45)).
+- A `padronizar_numeros()` agora trata casos em que "NO" é usado no lugar de
+  "nº", como em "LOTE NO 07" ([issue
+  #48](https://github.com/ipea/enderecobr/issues/48)).
+- A `padronizar_ceps()` agora corrige a presença de caracteres especiais no CEP
+  ([issue #53](https://github.com/ipea/enderecobr/issues/53)).
+- Na padronização de logradouros e campos afins, barras invertidas (`\`) agora
+  são convertidas em barras (`/`) ([issue
+  #43](https://github.com/ipea/enderecobr/issues/43)).
+- Corrigida a falta de espaço no número de rodovias, como em "RODOVIA RJ216" e
+  "RODOVIA BR393" ([issue #47](https://github.com/ipea/enderecobr/issues/47)).
+- Corrigidas grafias erradas de "Campos Elíseos" ([issue
+  #24](https://github.com/ipea/enderecobr/issues/24)) e variações incorretas de
+  "presidente", como "PREZIDENTE", "PRSIDENTE" e "PESIDENTE" ([issue
+  #19](https://github.com/ipea/enderecobr/issues/19)).
+- A `padronizar_estados()` agora sinaliza erros em inputs de estado inválidos
+  ([issue #46](https://github.com/ipea/enderecobr/issues/46)).
+- Ajustes no tratamento de municípios de mesmo nome e na documentação do
+  `cod_municipio` ([issue
+  #7](https://github.com/ipea/enderecobr/issues/7)).
+- Incluído o município de "Boa Esperança do Norte" na tabela de códigos
+  municipais ([issue
+  #45](https://github.com/ipea/enderecobr_rs/issues/45)).
+
+
+
 
 # enderecobr 0.5.0
 
