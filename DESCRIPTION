@@ -19,9 +19,9 @@ Description: Padroniza endereços brasileiros a partir de diferentes
     different criteria. Standardization methods include only basic string
     manipulation, not supporting probabilistic matches between strings.)
 License: MIT + file LICENSE
-URL: https://github.com/ipeaGIT/enderecobr,
+URL: https://github.com/ipea/enderecobr,
     https://ipeagit.github.io/enderecobr/
-BugReports: https://github.com/ipeaGIT/enderecobr/issues
+BugReports: https://github.com/ipea/enderecobr/issues
 Depends: 
     R (>= 4.2)
 Imports: 
@@ -43,5 +43,5 @@ Encoding: UTF-8
 Language: pt
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.3
 SystemRequirements: Cargo (Rust's package manager), rustc >= 1.65.0, xz
+Config/roxygen2/version: 8.1.0
