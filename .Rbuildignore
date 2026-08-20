@@ -21,3 +21,4 @@ pkgdown/
 ^src/Makevars$
 ^src/Makevars\.win$
 ^\.claude$
+^quality_reports

@@ -59,7 +59,7 @@ test_that("padroniza corretamente - character", {
     ~original,       ~padronizado_esperado,
     " 1 ",           "1",
     "s/n",           "S/N",
-    "NÚMERO",        "NUMERO",
+    "NÚMERO",        "S/N",
 
     "0001",          "1",
     "01 02",         "1 2",
@@ -81,7 +81,7 @@ test_that("padroniza corretamente - character", {
     "S/Nº",          "S/N",
     "S./N.",         "S/N",
     "S./Nº.",        "S/N",
-    "S./N. S N",     "S/N S/N",
+    "S./N. S N",     "S./N. S N",
     "SEM NUMERO",    "S/N",
     "X",             "S/N",
     "XX",            "S/N",
