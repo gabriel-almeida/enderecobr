@@ -11,6 +11,7 @@
   - macos-arm64 (devel)
   - windows (devel)
 
-## R CMD check results
+── R CMD check results ────────────────────────────────────────────── enderecobr 0.6.0 ────
+Duration: 3m 10s
 
-0 errors | 0 warnings | 0 notes
+0 errors ✔ | 0 warnings ✔ | 0 notes ✔
