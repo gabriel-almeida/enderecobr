@@ -7,14 +7,16 @@
 \alias{pacote-enderecobr}
 \title{enderecobr: Padronizador de Endereços Brasileiros (Brazilian Addresses Standardizer)}
 \description{
+\if{html}{\figure{logo.svg}{options: style='float: right' alt='logo' width='120'}}
+
 Padroniza endereços brasileiros a partir de diferentes critérios. Os métodos de padronização incluem apenas manipulações básicas de strings, não oferecendo suporte a correspondências probabilísticas entre strings. (Standardizes brazilian addresses using different criteria. Standardization methods include only basic string manipulation, not supporting probabilistic matches between strings.)
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/ipeaGIT/enderecobr}
+  \item \url{https://github.com/ipea/enderecobr}
   \item \url{https://ipeagit.github.io/enderecobr/}
-  \item Report bugs at \url{https://github.com/ipeaGIT/enderecobr/issues}
+  \item Report bugs at \url{https://github.com/ipea/enderecobr/issues}
 }
 
 }
@@ -23,6 +25,7 @@ Useful links:
 
 Authors:
 \itemize{
+  \item Daniel Herszenhut \email{dhersz@gmail.com} (\href{https://orcid.org/0000-0001-8066-1105}{ORCID})
   \item Rafael H. M. Pereira (\href{https://orcid.org/0000-0003-2125-7465}{ORCID})
   \item Lucas Mation (\href{https://orcid.org/0000-0002-7461-932X}{ORCID})
   \item Gabriel Garcia de Almeida (\href{https://orcid.org/0009-0003-3557-7328}{ORCID})

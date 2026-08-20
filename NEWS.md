@@ -1,4 +1,7 @@
-# enderecobr (versão em desenvolvimento)
+# enderecobr 0.5.0.9000 (versão em desenvolvimento)
+
+
+## Alterações e Correções upstream no enderecobr_rs
 
 ## Correção de bugs
 
@@ -15,8 +18,8 @@
 
 ## Notas
 
-- As funções de padronização foram [reescritas em Rust](https://github.com/ipeaGIT/enderecobr_rs), tornando-as muito mais
-  rápidas. Ganho de performance documentado [aqui](https://github.com/ipeaGIT/enderecobr/issues/65#issuecomment-3738525612).
+- As funções de padronização foram [reescritas em Rust](https://github.com/ipea/enderecobr_rs), tornando-as muito mais
+  rápidas. Ganho de performance documentado [aqui](https://github.com/ipea/enderecobr/issues/65#issuecomment-3738525612).
   
 # enderecobr 0.4.1
 
@@ -25,7 +28,7 @@
 - Corrigido bug na `padronizar_enderecos()` (quando chamada via
 `enderecobr::padronizar_enderecos()`) em que a função resultava num erro quando,
 internamente, a `padronizar_numeros()` lançava um warning. Relacionado ao [issue
-#38](https://github.com/ipeagit/enderecobr/issues/38).
+#38](https://github.com/ipea/enderecobr/issues/38).
 - Corrigido bug na `padronizar_enderecos()` (quando chamada via
 `enderecobr::padronizar_enderecos()`) em que a função resultava num erro quando,
 internamente, a `padronizar_ceps()` identificava um CEP inválido.
@@ -36,10 +39,10 @@ internamente, a `padronizar_ceps()` identificava um CEP inválido.
 
 - Corrigido bug na `padronizar_numeros()` em que zeros após o separador de
 milhares eram suprimidos. Por exemplo, "1.028" virava "1.28". Relacionado ao
-[issue #37](https://github.com/ipeaGIT/enderecobr/issues/37).
+[issue #37](https://github.com/ipea/enderecobr/issues/37).
 - Corrigido bug na `padronizar_numeros()` em que zeros de vetores numéricos não
 eram adequadamente transformados em "S/N". Relacionado ao [issue
-#38](https://github.com/ipeaGIT/enderecobr/issues/38).
+#38](https://github.com/ipea/enderecobr/issues/38).
 
 ## Novas funcionalidades
 
@@ -74,7 +77,7 @@ impedia que o pacote fosse usado sem ser explicitamente carregado com
 `library(enderecopadrao)`.
 - Ajuste na `padronizar_estados()`, evitando casos em que um valor padronizado
   poderia acabar sendo erroneamente atribuído a um estado de input (relacionado
-  ao [issue #26](https://github.com/ipeaGIT/enderecobr/issues/26)).
+  ao [issue #26](https://github.com/ipea/enderecobr/issues/26)).
 
 ## Novas funcionalidades
 
