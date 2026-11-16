@@ -106,6 +106,17 @@ mv_txt <- readLines(mv_fp)
   "x86_64-pc-windows-gnu"
 }
 
+# A lib estática do Rust deixa símbolos nativos para o link do .dll. A lista
+# fixa em Makevars.win.in cobre *-pc-windows-gnu; nos targets gnullvm o std usa
+# a sincronização de WaitOnAddress/WakeByAddress*, que no mingw-w64 só existe em
+# libsynchronization.a, e dbghelp para o backtrace. Conferido no
+# `--print=native-static-libs` do cargo build.
+.extra_win_libs <- if (grepl("gnullvm", .windows_target)) {
+  " -ldbghelp -lsynchronization"
+} else {
+  ""
+}
+
 # Cargo precisa do linker configurado pelo Rtools ao compilar o binário
 # `document`. O nome da variável de ambiente depende do target do Windows.
 .cargo_linker_var <- paste0(
@@ -118,6 +129,7 @@ mv_txt <- readLines(mv_fp)
 new_txt <- gsub("@CRAN_FLAGS@", .cran_flags, mv_txt) |>
   gsub("@WINDOWS_TARGET@", .windows_target, x = _) |>
   gsub("@CARGO_LINKER_VAR@", .cargo_linker_var, x = _) |>
+  gsub("@EXTRA_WIN_LIBS@", .extra_win_libs, x = _) |>
   gsub("@PROFILE@", .profile, x = _) |>
   gsub("@CLEAN_TARGET@", .clean_targets, x = _) |>
   gsub("@LIBDIR@", .libdir, x = _) |>

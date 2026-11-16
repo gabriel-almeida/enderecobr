@@ -155,3 +155,20 @@ documentação como bloco `#'`, e aí `devtools::document()` cria um `.Rd` (e um
 alvo de `R CMD check`) por função interna `*_rs`. Errado → documentar o binding
 em Rust com `///`. Certo → usar `//`: a documentação de usuário fica só no
 roxygen dos arquivos `R/`, como no resto do pacote.
+
+[LEARN:enderecobr] (2026-11-16) **Build passou a falhar no `windows-11-arm` sem
+nenhuma mudança de Rust — a imagem do runner mudou.** O job morria no link do
+`enderecobr.dll` com `undefined symbol: WaitOnAddress` / `WakeByAddressAll` /
+`WakeByAddressSingle`; o diff entre o commit que passou e o que falhou só tocava
+`R/`, `man/` e testes. A causa: a imagem `windows-11-vs2026-arm64` foi de
+`20261101.203` para `20261112.217` e trouxe rustc 1.100.0, cujo std no
+`aarch64-pc-windows-gnullvm` usa a sincronização baseada em futex. O próprio
+cargo diz o que falta: `RUSTFLAGS="--print=native-static-libs" cargo build --lib`
+imprime `-lR -lbcrypt -ladvapi32 -lkernel32 -lntdll -luserenv -lws2_32
+-ldbghelp -lsynchronization`, e a lista fixa em `src/Makevars.win.in` não tinha
+os dois últimos (no mingw-w64 `WaitOnAddress` só existe em
+`libsynchronization.a`, que é `api-ms-win-core-synch-l1-2-0`). Errado → caçar
+problema no crate ou na versão do `enderecobr_rs`. Certo → comparar a linha
+`Image:`/`Included Software` dos dois logs antes de tudo, e completar o link via
+`@EXTRA_WIN_LIBS@` (`-ldbghelp -lsynchronization` só nos triples `gnullvm`, para
+não reamarrar `Sleep` ao api-set no `*-pc-windows-gnu`, que linka sem isso).
