@@ -125,7 +125,7 @@ Full index of ~55 skills lives in the global `~/.claude/skills/`; most (paper/sl
 | `estruturar_segmentos()` | Regroups already-segmented trechos into the address fields without re-running the model |
 | `tipos_de_segmento()` | Lists the 18 segment labels the model emits |
 | `obter_modelo()` / `obter_caminho_modelo()` / `informacoes_do_modelo()` | Resolve, download and describe the `tagger.crf` model (`ENDERECOBR_MODELO`) |
-| `normalizar()`, `e_dado_faltante()`, `zerar_dado_faltante()`, `padronizar_metaphone()`, `numero_por_extenso()`, `romano_para_inteiro()` | Text utilities exposed alongside the padronizadores |
+| `normalizar()`, `e_dado_faltante()`, `zerar_dado_faltante()`, `padronizar_metaphone()`, `numero_por_extenso()`, `romano_para_inteiro()`, `padronizar_numeros_por_extenso()`, `padronizar_numero_romano_por_extenso()` | Text utilities exposed alongside the padronizadores |
 
 All R-level functions follow the same pattern: `checkmate` input validation → call the `*_rs()` extendr wrapper → `cli`/`rlang`-based structured errors (`erro_endbr`) / warnings (`warning_endbr`). Follow this pattern for any new function. Functions that need the CRF model do not raise Rust exceptions across the boundary: the wrapper builds a `List` with an `erro` element and the R layer turns it into `erro_modelo()` (`erro_endbr_modelo` class).
 

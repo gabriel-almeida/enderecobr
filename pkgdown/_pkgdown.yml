@@ -41,6 +41,8 @@ reference:
       - padronizar_metaphone
       - numero_por_extenso
       - romano_para_inteiro
+      - padronizar_numeros_por_extenso
+      - padronizar_numero_romano_por_extenso
   - title: "Tabelas de códigos"
   - contents:
       - codigos_municipios

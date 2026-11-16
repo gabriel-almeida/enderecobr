@@ -113,6 +113,58 @@ numero_por_extenso <- function(numeros) {
   numero_por_extenso_rs(as.integer(numeros))
 }
 
+#' Padronizar números por extenso
+#'
+#' Substitui sequências de dígitos de um texto pelos números escritos por
+#' extenso, em português.
+#'
+#' @param textos Um vetor de caracteres. Os textos a serem padronizados.
+#'
+#' @return Um vetor de caracteres com os números por extenso, em caixa alta. O
+#'   restante do texto é mantido como veio, sem normalização.
+#'
+#' @section Detalhes:
+#' A substituição é feita dígito a dígito na ordem em que aparecem, então
+#' `"12A"` vira `"DOZEA"`. Números fora do intervalo de um inteiro de 32 bits
+#' são deixados como estão, assim como os sinais e separadores (`"RUA -2.2"`
+#' vira `"RUA -DOIS.DOIS"`). Textos sem dígitos são devolvidos sem alteração.
+#'
+#' @examples
+#' padronizar_numeros_por_extenso(c("RUA 2", "Av. 5 de Julho, 22"))
+#'
+#' @export
+padronizar_numeros_por_extenso <- function(textos) {
+  checkmate::assert_character(textos)
+
+  padronizar_numeros_por_extenso_rs(enc2utf8(textos))
+}
+
+#' Padronizar números romanos por extenso
+#'
+#' Substitui números romanos válidos de um texto pelos números escritos por
+#' extenso, em português.
+#'
+#' @param textos Um vetor de caracteres. Os textos a serem padronizados.
+#'
+#' @return Um vetor de caracteres com os números romanos por extenso. O restante
+#'   do texto é mantido como veio, sem normalização.
+#'
+#' @section Detalhes:
+#' Só são convertidas as sequências que formam números romanos válidos, de 1 a
+#' 3999: `"Rua Pedro II"` vira `"Rua Pedro DOIS"`, mas palavras que apenas
+#' lembram algarismos romanos ficam intactas. O número romano é lido em caixa
+#' alta, então `"ix"` também é convertido e escrito por extenso em caixa alta.
+#'
+#' @examples
+#' padronizar_numero_romano_por_extenso(c("Capítulo IX", "Séculos XV e XX"))
+#'
+#' @export
+padronizar_numero_romano_por_extenso <- function(textos) {
+  checkmate::assert_character(textos)
+
+  padronizar_numeros_romanos_por_extenso_rs(enc2utf8(textos))
+}
+
 #' Converter números romanos em inteiros
 #'
 #' Converte números romanos escritos em algarismos para inteiros.

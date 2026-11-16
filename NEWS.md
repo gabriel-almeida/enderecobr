@@ -27,8 +27,9 @@ dedup  ainda dentro do R nos campos de estado, municipio e numero.
   #77](https://github.com/ipea/enderecobr/issues/77)). `tipos_de_segmento()`
   lista os tipos possíveis.
 - Novas funções auxiliares: `normalizar()`, `e_dado_faltante()`,
-  `zerar_dado_faltante()`, `padronizar_metaphone()`, `numero_por_extenso()` e
-  `romano_para_inteiro()`.
+  `zerar_dado_faltante()`, `padronizar_metaphone()`, `numero_por_extenso()`,
+  `romano_para_inteiro()`, `padronizar_numeros_por_extenso()` e
+  `padronizar_numero_romano_por_extenso()`.
 
 ## Adições e mudanças de padronização
 
